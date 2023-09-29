@@ -2,8 +2,11 @@ package com.example.diaryapp.main_tab
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-object MainTabViewModel : ViewModel() {
+@HiltViewModel
+class MainTabViewModel @Inject constructor(): ViewModel() {
 
     val liveData = MutableLiveData<ArrayList<MainModel.TempClass>>()
 

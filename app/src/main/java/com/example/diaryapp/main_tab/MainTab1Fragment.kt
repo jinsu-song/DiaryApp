@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.diaryapp.BaseFragment
 import com.example.diaryapp.databinding.MainTab1FragmentBinding
@@ -16,7 +17,7 @@ class MainTab1Fragment : BaseFragment() {
     private var mAdapter = MainTabAdapter()
     private var mMainTab1Data = ArrayList<MainModel.TempClass>()
 
-    private var vm = MainTabViewModel
+    private val vm : MainTabViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,7 +46,6 @@ class MainTab1Fragment : BaseFragment() {
             }
         }
         mAdapter.listCount = result.size
-        Log.d("@@@@@", "result.size >>> ${result.size}")
         return result
     }
 
