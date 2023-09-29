@@ -1,8 +1,7 @@
-package com.example.diaryapp.adapters
+package com.example.diaryapp.main_tab
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.diaryapp.MainTab1Fragment
 
 class MainTabPagerAdapter(fragmentActivity: Fragment, _titlesSize: Int) : FragmentStateAdapter(fragmentActivity){
 

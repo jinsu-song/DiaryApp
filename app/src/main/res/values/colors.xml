@@ -18,5 +18,7 @@
 
     <color name="rgb_f8f8f8_white">#f8f8f8</color>
     <color name="rgb_004b29_green">#004b29</color>
+    <color name="rgb_f1f1f1">#f1f1f1</color>
+    <color name="rgb_f8f8f8">#f8f8f8</color>
 
 </resources>
