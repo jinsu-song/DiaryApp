@@ -7,8 +7,9 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.example.diaryapp.BaseFragment
 import com.example.diaryapp.databinding.MenuFragmentBinding
+import javax.inject.Inject
 
-class MenuFragment : BaseFragment() {
+class MenuFragment @Inject constructor() : BaseFragment() {
 
     lateinit var binding: MenuFragmentBinding
 

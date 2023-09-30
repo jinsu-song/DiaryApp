@@ -10,11 +10,14 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.diaryapp.BaseFragment
 import com.example.diaryapp.databinding.MainTab1FragmentBinding
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class MainTab1Fragment : BaseFragment() {
+@AndroidEntryPoint
+class MainTab1Fragment @Inject constructor(): BaseFragment() {
     private lateinit var binding : MainTab1FragmentBinding
 
-    private var mAdapter = MainTabAdapter()
+    @Inject lateinit var mAdapter : MainTabAdapter
     private var mMainTab1Data = ArrayList<MainModel.TempClass>()
 
     private val vm : MainTabViewModel by viewModels()

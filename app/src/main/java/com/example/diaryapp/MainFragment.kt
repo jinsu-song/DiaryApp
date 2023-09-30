@@ -11,13 +11,14 @@ import com.example.diaryapp.main_tab.MainTab1Fragment
 import com.example.diaryapp.main_tab.MainTab2Fragment
 import com.example.diaryapp.main_tab.MainTab3Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import javax.inject.Inject
 
-class MainFragment : BaseFragment() {
+class MainFragment @Inject constructor(): BaseFragment() {
     private lateinit var binding: MainFragmentBinding
 
-    private lateinit var tab1Fragment: MainTab1Fragment
-    private lateinit var tab2Fragment: MainTab2Fragment
-    private lateinit var tab3Fragment: MainTab3Fragment
+    @Inject lateinit var tab1Fragment: MainTab1Fragment
+    @Inject lateinit var tab2Fragment: MainTab2Fragment
+    @Inject lateinit var tab3Fragment: MainTab3Fragment
 
     private val TAB_TITLE = arrayOf(
         "탭1",
@@ -38,11 +39,6 @@ class MainFragment : BaseFragment() {
     }
 
     private fun init() {
-        println("안녕하세요")
-
-        tab1Fragment = MainTab1Fragment()
-        tab2Fragment = MainTab2Fragment()
-        tab3Fragment = MainTab3Fragment()
 
         val sectionPagerAdapter : MainTabPagerAdapter = MainTabPagerAdapter(this, TAB_TITLE.size )
         sectionPagerAdapter.addFragment(tab1Fragment)
@@ -71,7 +67,6 @@ class MainFragment : BaseFragment() {
             }
 
         }.attach()
-
 
     }
 

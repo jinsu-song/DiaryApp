@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.diaryapp.BaseFragment
 import com.example.diaryapp.databinding.MainTab2FragmentBinding
+import javax.inject.Inject
 
-class MainTab2Fragment : BaseFragment() {
+class MainTab2Fragment @Inject constructor() : BaseFragment() {
 
     private lateinit var binding: MainTab2FragmentBinding
 

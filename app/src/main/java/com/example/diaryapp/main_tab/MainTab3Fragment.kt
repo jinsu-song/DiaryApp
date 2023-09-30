@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.diaryapp.BaseFragment
 import com.example.diaryapp.databinding.MainTab3FragmentBinding
+import javax.inject.Inject
 
-class MainTab3Fragment : BaseFragment() {
+class MainTab3Fragment @Inject constructor() : BaseFragment() {
     private lateinit var binding: MainTab3FragmentBinding
 
     override fun onCreateView(

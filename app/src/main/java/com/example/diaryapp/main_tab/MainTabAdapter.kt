@@ -5,8 +5,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.diaryapp.databinding.MainItemHeader1Binding
+import javax.inject.Inject
 
-class MainTabAdapter : RecyclerView.Adapter<MainTabViewHolder>() {
+class MainTabAdapter @Inject constructor(): RecyclerView.Adapter<MainTabViewHolder>() {
     private val list = arrayListOf<MainViewItem>()
 
     var listCount: Int = 0
