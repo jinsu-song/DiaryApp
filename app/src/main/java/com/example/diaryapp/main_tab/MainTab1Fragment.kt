@@ -37,6 +37,7 @@ class MainTab1Fragment @Inject constructor(): BaseFragment() {
         binding.recyclerview.layoutManager = LinearLayoutManager(requireActivity())
         observeData()
         vm.getUserInsertInfo()
+        println("연습연습")
     }
 
     private fun ArrayList<MainModel.TempClass>.toViewList(): ArrayList<MainViewItem> {
